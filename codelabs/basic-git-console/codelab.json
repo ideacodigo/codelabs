@@ -1,0 +1,27 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-06-19T20:58:47-05:00",
+  "id": "basic-git-console",
+  "duration": 6,
+  "title": "Git consola básico",
+  "authors": "diego0at",
+  "summary": "Git básico en consola.",
+  "source": ".\\basic-git-console.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "desarrollo",
+    "github",
+    "git"
+  ],
+  "tags": [
+    "git"
+  ],
+  "feedback": "https://diego0at.github.io/",
+  "url": "basic-git-console"
+}

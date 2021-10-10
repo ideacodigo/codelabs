@@ -1,0 +1,27 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-06-24T18:37:12-05:00",
+  "id": "up-portafolio-github-pages",
+  "duration": 0,
+  "title": "Subir un portafolio a Github pages.",
+  "authors": "diego0at",
+  "summary": "Subir un portafolio a Github pages.",
+  "source": ".\\up-portafolio-github-pages.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "git",
+    "github",
+    "web"
+  ],
+  "tags": [
+    "git"
+  ],
+  "feedback": "https://diego0at.github.io/",
+  "url": "up-portafolio-github-pages"
+}

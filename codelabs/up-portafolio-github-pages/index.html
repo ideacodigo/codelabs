@@ -1,0 +1,130 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Subir un portafolio a Github pages.</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="up-portafolio-github-pages"
+                  title="Subir un portafolio a Github pages."
+                  environment="web"
+                  feedback-link="https://diego0at.github.io/">
+    
+      <google-codelab-step label="Preparando el portafolio." duration="0">
+        <h2 is-upgraded>Portafolio</h2>
+<p>El portafolio debe estar construido unicamente en html, css y js.</p>
+<p>Utilizare el portafolio jaume, el cual lo puedes encontrar en la pagina <a href="https://leonidasesteban.com/" target="_blank">leonidasesteban.com</a>.</p>
+<h2 is-upgraded>Iniciando el repositorio</h2>
+<pre><code language="language-Git" class="language-Git">   Git init
+</code></pre>
+<h2 is-upgraded>Confirmando archivos</h2>
+<pre><code language="language-Git" class="language-Git">   Git add .
+</code></pre>
+<h2 is-upgraded>Verificando estado</h2>
+<pre><code language="language-Git" class="language-Git">   Git status
+</code></pre>
+<h2 is-upgraded>Confirmando los archivos</h2>
+<pre><code language="language-Git" class="language-Git">   Git commit -m &#39;first commit portafolio&#39;
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Preparando repositorio en Github" duration="0">
+        <h2 is-upgraded>Cuenta en Github</h2>
+<p>Vamos a obviar esta sección ya que puedes crear una cuenta en <a href="https://github.com/" target="_blank">Github</a> muy fácilmente, te puedes apoyar de tutoriales en internet.</p>
+<aside class="special"><p>La cuenta puede ser gratuita.</p>
+</aside>
+<p>Igualmente para ingresar, ingrese tu usuario y contraseña, solo confirmas tu inicio de sección en el correo y ya lo tienes.</p>
+<h2 is-upgraded>Formulario de creación</h2>
+<p>Hay varias rutas u opciones en gitHub para acceder al formulario parar crear un nuevo repositorio, miremos algunas.</p>
+<h3 is-upgraded>Menu de opciones</h3>
+<p>Una vez hallamos ingresado, nos ubicamos en el menu superior y en este menu buscamos un sud-menu desplegable en el cual podemos encontrar la opción de <em>new repository</em>. Miremos un recorte para identificarlo mejor <img alt="Screenshot option add" src="img\dac2306d1434e0b0.png"></p>
+<h3 is-upgraded>Barra de dirección</h3>
+<p>Nos ubicamos en la barra de direcciones del navegador y ya habiendo ingresando en Github, anexamos a la dirección de <code>github.com</code>  <a href="https://github.com/new" target="_blank"><code>/new</code></a></p>
+<h2 is-upgraded>LLenado el formulario de creación</h2>
+<h3 is-upgraded>Nombre</h3>
+<p>Muy bien, hora en nuestro formulario de creación del repositorio vamos a ingresar un nombre, prueba ingresar cualquier nombre, github te advertirá cuando el nombre del repositorio no este disponible o tenga algún carácter inadecuado.</p>
+<h3 is-upgraded>Descripción</h3>
+<p>La descripción como lo menciona es opcional, siempre es recomendable agregar una y más aún si piensas colaborar con otras personas.</p>
+<h3 is-upgraded>¿Publico o privado?</h3>
+<p>Seleccionamos un repositorio publico para que tu portafolio lu pueda ver cualquier persona interesada en tu trabajo. Puedes crear repositorios privados, aunque estos cuenten con algunas opciones limitadas para una cuenta gratuita.</p>
+<h2 is-upgraded>Finalizando</h2>
+<p>Muy bien, ya lo tienes. Una vez ya hayas llenado las opciones mencionadas anteriormente estas listo para finalizar la creación del formulario.</p>
+<aside class="special"><p>Probablemente hayas notado que no mencionamos otras opciones como la licencia, el Readme o el archivo .gitignore, no te preocupes, miraremos estas opciones en otra ocasión, pero para seguir al pie con esta guía, no las vamos a marcar ninguna de las anteriores opciones.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuración." duration="0">
+        <p>Una vez hayas confirmado la creación del repositorio, Git mostrar una configuración rápida para conectar tur repositorio local con el repositorio en github, el cuál ya hemos creado.</p>
+<h2 is-upgraded>Opciones de configuración.</h2>
+<p>La configuración rápida que nos es mostrada no ofrece tres opciones, vamos a revisarlas rápidamente, nos extenderemos un poco mas en la cuál vallamos a utilizar.</p>
+<h3 is-upgraded>Configuración rápida.</h3>
+<p>En la configuración rápida nos es mostrada dos opciones:</p>
+<ol type="1">
+<li>Esta nos indica que realizamos la conexión con la aplicación de github para escritorios, en caso de que la tengamos instalada.</li>
+<li>Nos es facilitado las direcciónes, ya sea https o ssh, con esto asumen que ya tenemos conocimientos básicos y unicamente con la dirección ya tenemos suficiente.</li>
+</ol>
+<aside class="warning"><p>Ya empezando nos es recomendado algunas cosas, entre ellas crear los archivos que no hemos seleccionado en el formulario de creación. Pero en este caso la hacemos adrede para agregarlos posteriormente, mas adelante realizaremos un ejercicio agregándolos por defecto.</p>
+</aside>
+<h3 is-upgraded>Creando un repositorio por medio de linea de comandos.</h3>
+<p>Esto se refiere a iniciar el repositorio localmente y conectarlo mediate linea de comandos. No utilizaremos este paso ya que hemos preparado el proyecto anteriormente en la sección <strong>Preparando el portafolio</strong>.</p>
+<pre><code language="language-Git" class="language-Git">echo &#34;# diego0at&#34; &gt;&gt; README.md
+Git init
+Git add README.md
+Git commit -m &#34;first commit&#34;
+Git branch -M main
+Git remote add origin https://github.com/diego0at/diego0at.git
+Git push -u origin main
+</code></pre>
+<h3 is-upgraded>Enviar a un repositorio existente desde la linea de comando.</h3>
+<p>Como ya tenemos listo nuestro repositorio localmente, lo único que nos falta es enviar los archivos, por lo que vamos a utilizar este paso para nuestro proyecto.</p>
+<aside class="special"><p>Este paso es que utilizaremos para nuestro proyecto de ejemplo.</p>
+</aside>
+<p>Bien, ahora antes ingresar los siguientes comandos, no olvides ubicarte en el proyecto desde la terminal, verifica que tus archivos estén listos con <code>Git status</code>, esto no debe mostrar archivos pendientes.</p>
+<pre><code language="language-Git" class="language-Git">git remote add origin https://github.com/diego0at/diego0at.git
+git branch -M main
+git push -u origin main
+</code></pre>
+<p>Ahora puedes recargar la página de la configuración recomendada por github, y ahora en vez de las recomendaciones mostrara los archivos de tu proyecto.</p>
+<h3 is-upgraded>Importar código de otro repositorio</h3>
+<p>En esta opción nos sirve en caso de que necesitemos importar nuestro proyecto de otro repositorio.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Habilitando Github pages en nuestro repositorio." duration="0">
+        <p class="image-container"><img alt="screenshot option settings" src="img\ac624f6d9ee57fdb.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-06-19T22:08:59-05:00",
+  "id": "some-git",
+  "duration": 0,
+  "title": "Un Poco de Git",
+  "authors": "diego0at",
+  "summary": "Un poco de Git.",
+  "source": ".\\some-git.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "git"
+  ],
+  "tags": [
+    "git"
+  ],
+  "feedback": "https://diego0at.github.io/",
+  "url": "some-git"
+}

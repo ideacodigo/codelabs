@@ -1,0 +1,172 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Git consola básico</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="basic-git-console"
+                  title="Git consola básico"
+                  environment="web"
+                  feedback-link="https://diego0at.github.io/">
+    
+      <google-codelab-step label="¿Qué es lo que aremos?" duration="2">
+        <p>Con <a href="#" target="_blank">Git Instalado</a>, podemos empezar a comenzar un repositorio localmente y empezar a utilizar algunos comandos básicos para gestionar nuestros repositorios y archivos, así que vamos a ello.</p>
+<aside class="warning"><p>Para los ejercicios utilizaremos el proyecto de portafolio jaume, el cual lo puedes encontrar en la pagina <a href="https://leonidasesteban.com/" target="_blank">leonidasesteban.com</a>, o puedes utilizar cualquiera proyecto de preferencia, es más, hasta puedes trabajar con un archivos realizado simples modificaciones.</p>
+</aside>
+<h2 is-upgraded>Comando a utilizar</h2>
+<p>Antes de empezar quiero enumerar los comandos y banderas que vamos a utilizar, esto por si quiero recordar algún comando, pueda visualizarlo rápidamente.</p>
+<pre><code language="language-git" class="language-git">Git add remote origine *dirección*
+Git init
+Git commit -m &#39;comentario&#39;
+</code></pre>
+<p><strong>Recursos:</strong></p>
+<ul>
+<li>Markdown del codelab para enviar solicitud de cambios: <a href="https://www.marcd.dev/codelab-4-codelab" target="_blank">modificar</a></li>
+<li>Introducción a Markdown: <a href="https://github.com/Mrc0113/codelab-4-codelab/blob/master/codelab.md" target="_blank">modificar</a></li>
+<li>[Solicitudes(https://github.com/googlecodelabs/tools) - Enviar solicitudes de cambios en Github</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuración inicial" duration="2">
+        <p>Dentro de las configuraciones de Git, podemos encontrar la <strong>identidad</strong> y el editor de texto, en esta ocasión vamos a configurar la identidad, ya que es lo primero que debemos hacer después de instalar Git.</p>
+<p>Para iniciar, abrimos cualquier consola de preferencia. Una vez tengamos nuestra consola, vamos a proceder a configurar Git.</p>
+<h2 is-upgraded>Identidad</h2>
+<ul>
+<li><code>git config --global user.name &#34;miNombre&#34;</code></li>
+<li><code>git config --global user.email miEmail.email.com</code></li>
+</ul>
+<p>Como son nuestros primeros comandos ingresados vamos a mencionar algunas cosas:</p>
+<p><code>git</code> Inicia todos los comandos que podamos ingresar.</p>
+<p><code>--global</code> Utilizamos esta bandera para que las configuraciones sean aplicadas de manera global y no a nivel de proyecto.</p>
+<aside class="special"><p>Los comandos de configuración solo es necesario relanzarlo una vez, si deseamos modificarlos simplemente volvemos a ejecutar los comandos de configuración.</p>
+</aside>
+<h2 is-upgraded>Comprobando la configuración</h2>
+<ul>
+<li><code>git config --list</code></li>
+</ul>
+<p>Si deseas una consulta mas especifica:</p>
+<ul>
+<li><code>git config user.name</code></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Iniciando repositorio" duration="2">
+        <p>Para iniciar nuestro repositorio localmente, creamos y nos dirigimos a al directorio donde vayamos a trabajar nuestro proyecto.</p>
+<p>Podemos realizar este trabajo mediante cmd.</p>
+<pre><code>cd D:\user\juan\Documentos
+mkdir miProyecto 
+cd miProyecto
+</code></pre>
+<p>Una vez creado y ubicados en el proyecto en la terminal, procedemos a iniciar nuestro repositorio con <code>Git init</code></p>
+<pre><code language="language-Git" class="language-Git">Git init
+</code></pre>
+<p><code>Git init</code> inicia nuestro repositorio. Esto creara una carpeta oculta  <code>.init</code>  la cual tiene los archivos necesarios para que el repositorio funcione correctamente, asi que no se te ocurra borrarla.</p>
+<h2 is-upgraded>Estado del repositorio</h2>
+<p>Ahora que hemos iniciado nuestro repositorio vamos a comprobar su estado, para ello utilizamos <code>Git status</code>.</p>
+<pre><code language="language-Git" class="language-Git">Git status
+</code></pre>
+<p>Como no hemos creado ninguna archivo, nos dirá que aún no hay confirmaciones. Esto está bien, así que vamos a empezar a agregar archivos, en mi caso voy a agregar mi proyecto, pero para fines de pruebas puedes agregar cualquier archivo de preferencia  de texto.</p>
+<p>Una vez agregados los archivos, el estado de git nos indica en color rojo que tenemos archivos pendientes en nuestro repositorio.</p>
+<p class="image-container"><img alt="screenshot git status" src="img\c479d963389e2628.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Agregando archivos" duration="0">
+        <h2 is-upgraded>Agregando archivos</h2>
+<p>Los archivos pendientes en nuestro repositorio necesitan ser confirmados, para agregar archivos a nuestro repositorio utilizamos <code>Git add</code></p>
+<p><code>Git add</code> nos permite agregar archivos de diferentes maneras, podemos especificar el nombre del archivo que queremos agregar, también el tipo de archivos o directamente todos los archivos</p>
+<h3 is-upgraded>Agregando por nombre</h3>
+<p>Simplemente mencionamos el nombre del archivo en especifico, el cual deseamos agregar</p>
+<pre><code language="language-Git" class="language-Git">Git add index.html
+</code></pre>
+<h3 is-upgraded>Agregando por extension</h3>
+<p>En lugar del nombre, anteponemos * y seguido mencionamos el tipo de extensión que queremos agregar</p>
+<pre><code language="language-Git" class="language-Git">Git add *.html
+</code></pre>
+<h3 is-upgraded>Agregando todos los archivos</h3>
+<p>Para agregar todos los archivos simplemente agregamos un punto.</p>
+<pre><code language="language-Git" class="language-Git">Git add .
+</code></pre>
+<h3 is-upgraded>Resultado</h3>
+<p>Después de agregar todos los archivos pendientes, utilizamos <code>Git status</code> para verificar su estado.</p>
+<p class="image-container"><img alt="screenshot git status" src="img\3c1835c23cc5830a.png"></p>
+<pre><code>PS D:\Archivos\diego0at&gt; git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use &#34;git rm --cached &lt;file&gt;...&#34; to unstage)
+        new file:   .gitignore
+        new file:   .vscode/settings.json
+        new file:   assets/icons/icon-down.svg
+        new file:   assets/icons/icon-github.svg
+        new file:   assets/icons/icon-heart_outline.svg  
+        new file:   assets/icons/icon-important_mail.svg 
+        new file:   assets/icons/icon-instagram.svg      
+        new file:   assets/icons/icon-phone.svg
+        new file:   assets/icons/icon-twitter_squared.svg
+        new file:   assets/images/1-testimony.png        
+        new file:   assets/images/2-testimony.png        
+        new file:   assets/images/3-testimony.png        
+        new file:   assets/images/user.png
+        new file:   assets/logo.png
+        new file:   assets/logo.svg
+        new file:   assets/styles/button-ico.css
+        new file:   assets/styles/button.css
+        new file:   assets/styles/footer.css
+        new file:   assets/styles/formulario.css
+        new file:   assets/styles/header.css
+        new file:   assets/styles/hero.css
+        new file:   assets/styles/index.css
+        new file:   assets/styles/menu.css
+        new file:   assets/styles/project.css
+        new file:   assets/styles/social.css
+        new file:   assets/styles/title.css
+        new file:   assets/styles/wrapper.css
+        new file:   index.html
+
+PS D:\Archivos\diego0at&gt; 
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Guardando versiones" duration="0">
+        
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

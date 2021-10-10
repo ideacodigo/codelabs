@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-06-01T18:34:34-05:00",
+  "id": "git_flow-github",
+  "duration": 25,
+  "title": "GitFlow con Github",
+  "authors": "diego0at",
+  "summary": "GitFlow con Github",
+  "source": ".\\git_flow-github.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "desarrollo"
+  ],
+  "tags": [
+    "git"
+  ],
+  "feedback": "https://www.facebook.com/startupfullstack",
+  "url": "git_flow-github"
+}
