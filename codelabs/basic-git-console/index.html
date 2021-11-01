@@ -52,7 +52,7 @@ Git commit -m &#39;comentario&#39;
 <p>Para iniciar, abrimos cualquier consola de preferencia. Una vez tengamos nuestra consola, vamos a proceder a configurar Git.</p>
 <h2 is-upgraded>Identidad</h2>
 <ul>
-<li><code>git config --global user.name &#34;miNombre&#34;</code></li>
+<li><code>git config --global user.name "miNombre"</code></li>
 <li><code>git config --global user.email miEmail.email.com</code></li>
 </ul>
 <p>Como son nuestros primeros comandos ingresados vamos a mencionar algunas cosas:</p>
@@ -89,7 +89,7 @@ cd miProyecto
 </code></pre>
 <p>Como no hemos creado ninguna archivo, nos dirá que aún no hay confirmaciones. Esto está bien, así que vamos a empezar a agregar archivos, en mi caso voy a agregar mi proyecto, pero para fines de pruebas puedes agregar cualquier archivo de preferencia  de texto.</p>
 <p>Una vez agregados los archivos, el estado de git nos indica en color rojo que tenemos archivos pendientes en nuestro repositorio.</p>
-<p class="image-container"><img alt="screenshot git status" src="img\c479d963389e2628.png"></p>
+<p class="image-container"><img alt="screenshot git status" src="img\\c479d963389e2628.png"></p>
 
 
       </google-codelab-step>
@@ -112,45 +112,8 @@ cd miProyecto
 </code></pre>
 <h3 is-upgraded>Resultado</h3>
 <p>Después de agregar todos los archivos pendientes, utilizamos <code>Git status</code> para verificar su estado.</p>
-<p class="image-container"><img alt="screenshot git status" src="img\3c1835c23cc5830a.png"></p>
-<pre><code>PS D:\Archivos\diego0at&gt; git status
-On branch master
-
-No commits yet
-
-Changes to be committed:
-  (use &#34;git rm --cached &lt;file&gt;...&#34; to unstage)
-        new file:   .gitignore
-        new file:   .vscode/settings.json
-        new file:   assets/icons/icon-down.svg
-        new file:   assets/icons/icon-github.svg
-        new file:   assets/icons/icon-heart_outline.svg  
-        new file:   assets/icons/icon-important_mail.svg 
-        new file:   assets/icons/icon-instagram.svg      
-        new file:   assets/icons/icon-phone.svg
-        new file:   assets/icons/icon-twitter_squared.svg
-        new file:   assets/images/1-testimony.png        
-        new file:   assets/images/2-testimony.png        
-        new file:   assets/images/3-testimony.png        
-        new file:   assets/images/user.png
-        new file:   assets/logo.png
-        new file:   assets/logo.svg
-        new file:   assets/styles/button-ico.css
-        new file:   assets/styles/button.css
-        new file:   assets/styles/footer.css
-        new file:   assets/styles/formulario.css
-        new file:   assets/styles/header.css
-        new file:   assets/styles/hero.css
-        new file:   assets/styles/index.css
-        new file:   assets/styles/menu.css
-        new file:   assets/styles/project.css
-        new file:   assets/styles/social.css
-        new file:   assets/styles/title.css
-        new file:   assets/styles/wrapper.css
-        new file:   index.html
-
-PS D:\Archivos\diego0at&gt; 
-</code></pre>
+<p class="image-container"><img alt="screenshot git status" src="img\\3c1835c23cc5830a.png"></p>
+<p>Cuando modifiquemos un archivo, este debe ser agregado nuevamente con <code>git add</code>.</p>
 
 
       </google-codelab-step>

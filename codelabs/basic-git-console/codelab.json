@@ -3,7 +3,7 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2021-06-19T20:58:47-05:00",
+  "updated": "2021-10-24T10:47:49-05:00",
   "id": "basic-git-console",
   "duration": 6,
   "title": "Git consola básico",
@@ -15,12 +15,10 @@
     "published"
   ],
   "category": [
-    "desarrollo",
-    "github",
-    "git"
+    "web"
   ],
   "tags": [
-    "git"
+    "vslive"
   ],
   "feedback": "https://diego0at.github.io/",
   "url": "basic-git-console"
