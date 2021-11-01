@@ -144,9 +144,50 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                </paper-tabs>
             </div>
 
-            </div>
+            <paper-dropdown-menu label="Filter by category" class="dropdown-filter" no-label-float noink no-animations>
+               <paper-listbox id="categorylist" slot="dropdown-content" class="dropdown-content"
+                  on-iron-activate="onCategoryActivate" attr-for-selected="filter">
+                  <paper-item filter="sample">sample</paper-item>
+                  <paper-item filter="web">web</paper-item>
+                  
+               </paper-listbox>
+            </paper-dropdown-menu></div>
 
          <card-sorter id="cards" class="site-width">
+            
+            
+            
+            <a href="/codelabs\basic-git-console\index.html?index=..%2F..vslive" on-tap="navigate"
+               class="codelab-card category-web" data-category="web"
+               data-title="Git consola básico" data-duration="6" data-updated="2021-10-24T10:47:49-05:00"
+               data-tags="vslive" data-pin="">
+               <div class="description">Git consola básico</div>
+               <div class="card-duration">
+                  <span>6 min </span>
+                  <span>Updated Oct 24, 2021</span>
+               </div>
+               <div class="card-footer">
+                  <div class="category-icon web-icon"></div>
+                  <paper-button class="web-bg">Start</paper-button>
+               </div>
+            </a>
+            
+            
+            
+            <a href="/codelabs\how-to-write-a-codelab\index.html?index=..%2F..vslive" on-tap="navigate"
+               class="codelab-card category-sample" data-category="sample"
+               data-title="How to Write a Codelab" data-duration="10" data-updated="2021-10-24T10:48:11-05:00"
+               data-tags="vslive" data-pin="">
+               <div class="description">How to Write a Codelab</div>
+               <div class="card-duration">
+                  <span>10 min </span>
+                  <span>Updated Oct 24, 2021</span>
+               </div>
+               <div class="card-footer">
+                  <div class="category-icon sample-icon"></div>
+                  <paper-button class="sample-bg">Start</paper-button>
+               </div>
+            </a>
             
          </card-sorter>
 
