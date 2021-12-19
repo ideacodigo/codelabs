@@ -1,0 +1,119 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Codelabs</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="codelabs"
+                  title="Codelabs"
+                  environment="web"
+                  feedback-link="https://diego.iniciarweb.online/">
+    
+      <google-codelab-step label="Introduction" duration="1">
+        <p>Crear CodeLabs, actividad para documentar y enseñar el desarrollo de aplicaciones u cualquier otra actividad que necesite ser documentada de una manera eficiente.</p>
+<p>Aprender a manejar el conjunto de herramientas codeLabs puede llegar a ser un trabajo de práctica y lectura, y se puede convertir en largo proceso si no conocemos el camino adecuado. En este codeLab pretendo documentar el proceso de creación y personalización de mi sitio junto con la creación de codelabs.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Inicio" duration="1">
+        <p>Una explicación más detallada de qué son los codeLabs la podemos encontrar en su página en github: <a href="https://github.com/googlecodelabs/tools" target="_blank">googlecodelabs/tools: Herramientas de gestión y alojamiento de Codelabs (github.com)</a>, por lo que me saltaré esta explicación.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Requisitos" duration="1">
+        <ul>
+<li>Git.</li>
+<li>Node:         <a href="https://nodejs.org/es/download/" target="_blank">Descarga | Node.js (nodejs.org)</a><br>Instalación normal.</li>
+<li>Gulp:        <a href="https://gulpjs.com/docs/en/getting-started/quick-start/" target="_blank">Quick Start | gulp.js (gulpjs.com)</a><br>Seguir la instalación recomendada para no presentar problemas.</li>
+<li>Claat:         <a href="https://github.com/googlecodelabs/tools/tree/main/claat" target="_blank">tools/claat at main · googlecodelabs/tools (github.com)</a></li>
+</ul>
+<h2 is-upgraded><strong>Claat</strong></h2>
+<p>Instalación mediante el <a href="https://github.com/googlecodelabs/tools/releases/download/v2.2.4/claat-windows-amd64.exe" target="_blank">ejecutable</a>, también es posible realizarla mediante Go, lo que significa que tiene que instalar Go. <br>Descargamos el ejecutable y lo ubicamos en la carpeta donde planeamos guardar nuestros codelabs, el único inconveniente de esto: </p>
+<aside class="warning"><p>Al ejecutar cualquier comando de claat debemos hacerlo llamando al ejecutable directamente, seguido del comando a llamar: <code>claat.exe help.</code> Esto en caso de utilizar el ejecutable.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Página principal" duration="3">
+        <p>Quisiera empezar enseñando la página que servirá nuestros codelabs, también miraremos las principales funciones basicas.</p>
+<p>El objetivo es personalizar la página que sirve los codelabs y lograr grandes presentaciones como lo es: <a href="https://codelabs.developers.google.com/" target="_blank">Google Codelabs</a></p>
+<h2 is-upgraded><strong>Preparando</strong></h2>
+<p>Para esto nos dirigimos al repositorio de herramientas y clonamos el repositorio: <a href="https://github.com/googlecodelabs/tools" target="_blank">googlecodelabs/tools: Codelabs management &amp; hosting tools (github.com)</a><strong>.</strong></p>
+<p>La carpeta que contiene nuestra plantilla es llamada <code>site</code>, accedemos a esta carpeta e instalamos las dependencias.</p>
+<pre><code>cd site/
+
+npm install</code></pre>
+<aside class="warning"><p>Para lanzar el servidor local debemos ejecutar los comandos en una terminal con permisos de administrador, este es un inconveniente que resolveremos más adelante. Si se presenta algún problema intente identificar el problema que arroja la terminal, probablemente necesite activar la ejecución de scripts</p>
+</aside>
+<p>Ahora vamos a servir nuestro sitio en modo de desarrollo.</p>
+<pre><code>gulp serve</code></pre>
+<p>Podemos ver el servidor ejecutándose de forma predeterminada en: <code>http://localhost:8000/</code></p>
+<h2 is-upgraded>Resultado</h2>
+<p class="image-container"><img style="width: 624.00px" src="img\\ee0dce232eb88a16.png"></p>
+<p>El resultado será un poco simple, tal vez te preguntarás que esto no se parece nada al codelab de ejemplo mencionado anteriormente, además no se muestran codelabs. Vamos a dejar el diseño para un nuevo codelab, por ahora vamos a ver las funciones que podemos agregar.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Codelab con google docs" duration="1">
+        <h2 is-upgraded><strong>Plantilla de ejemplo</strong></h2>
+<p>Copiamos el siguiente ejemplo de codelab a nuestro drive para que podamos editarlo: <a href="https://docs.google.com/document/d/1E6XMcdTexh5O8JwGy42SY3Ehzi8gOfUGiqTiUX6N04o/edit" target="_blank">Example Codelab - Your first Progressive Web App - Documentos de Google</a></p>
+<h2 is-upgraded><strong>Visualizar cambios</strong></h2>
+<p>Para visualizar como esta quedando nuestro codelab tenemos que instalar una extensión: <a href="https://chrome.google.com/webstore/detail/preview-codelab/lhojjnijnkiglhkggagbapfonpdlinji" target="_blank">Preview Codelab - Chrome Web Store (google.com)</a></p>
+<p>Ubicados en nuestro codelab, seleccionamos la extensión y automáticamente muestra el codelab.</p>
+<p>También puedes visualizar navegando manualmente e incluyendo al final de la siguiente dirección el id de su documento: <code>https://codelabs-preview.appspot.com/?file_id=</code></p>
+<h2 is-upgraded><strong>Guía de funcionalidades que podemos incluir</strong></h2>
+<p>Para incluir funcionalidades a nuestro codelab podemos revisar la siguiente guía: <a href="https://docs.google.com/document/d/18dnMdUJQaGKY1Tit_-fO1YOpOpAbA4hh0YDXQlCEjvA/edit" target="_blank">Codelab Formatting Guide (External) - Documentos de Google</a></p>
+<h2 is-upgraded><strong>Obtener el archivo compilado</strong></h2>
+<aside class="warning"><p>Para esto necesitamos tener listo los prerrequisitos de este codelab, vamos a utilizar <strong>claat </strong>para la conversión de nuestro documento de google docs.</p>
+</aside>
+<ol type="1" start="1">
+<li>Vamos a ubicarnos en la carpeta donde queremos guardar nuestro codelab, en esa carpeta tiene que estar ubicado el programa claat.</li>
+<li>Para compilar nuestro archivo de google docs necesitamos identificar el <strong>ID </strong>del documento, este lo podemos encontrar en la dirección url, observemos la siguiente imagen:<br><img style="width: 624.00px" src="img\\b996c010710c81b0.png"></li>
+<li>Para ejecutar la exportación vamos a ubicarnos en la carpeta que tenemos el programa claat y ejecutaremos lo siguiente : <code>.\claat.exe export "ID obtenido en el punto 2"</code></li>
+</ol>
+<p>Ahora tenemos nuestro codelab en una carpeta con el nombre del codelab. Vamos a servir este codelab en nuestra página principal.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Servir codelabs" duration="0">
+        <p>Si lanzamos nuestra página principal sin ninguna bandera, esta no detectará ningún codelab, para esto necesitamos crear una carpeta que contenga los codelabs creados.</p>
+<h2 is-upgraded><strong>bandera para apuntar a los codelabs</strong></h2>
+<p>En nuestra proyecto hemos creado una carpeta <code>codelabs</code>, la cual contendrá nuestros codelabs, ubicados en el proyecto que contiene  a la carpeta de nuestros codelabs y ejecutamos:</p>
+<p><code>gulp serve --codelabs-dir=codelabs</code></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Recursos</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="recursos"
+                  title="Recursos"
+                  environment="web"
+                  feedback-link="diego.iniciarweb.online">
+    
+      <google-codelab-step label="Backend para subir imagenes" duration="3">
+        <p><a href="https://cloudinary.com/" target="_blank">Image and Video Upload, Storage, Optimization and CDN (cloudinary.com)</a></p>
+<h2 is-upgraded><strong>Registro</strong></h2>
+<p>Realizamos un registro, confiamos el correo y configuración inicial.</p>
+<h2 is-upgraded><strong>Configuración</strong></h2>
+<h3 is-upgraded><strong>Add upload preset</strong></h3>
+<p><code>settings / upload / Upload presets / add upload preset</code></p>
+<p class="image-container"><img style="width: 740.41px" src="img\\938a8bb7140e1852.png"></p>
+<p class="image-container"><img style="width: 740.41px" src="img\\5712844f0150bd7b.png"></p>
+<h3 is-upgraded><strong>Config storage and access</strong></h3>
+<table>
+<tr><td colspan="1" rowspan="1"><ol type="1" start="1">
+<li>Asignar el nombre</li>
+</ol>
+</td><td colspan="1" rowspan="1"><ol type="1" start="2">
+<li>Modificar el signing mode: <strong><code>unsigned</code></strong></li>
+</ol>
+</td><td colspan="1" rowspan="1"><ol type="1" start="3">
+<li>Guardar</li>
+</ol>
+</td></tr>
+</table>
+<aside class="warning"><p><strong><code>Unsigned</code></strong> permite el acceso a grabar imágenes a cualquier persona que tenga conocimiento de la dirección de nuestro proyecto</p>
+</aside>
+<p class="image-container"><img style="width: 740.41px" src="img\\34aaee163755fe10.png"></p>
+<h2 is-upgraded><strong>Subir imagen</strong></h2>
+<p><a href="https://cloudinary.com/documentation/upload_images#uploading_with_a_direct_call_to_the_rest_api" target="_blank">Uploading with a direct call to the REST API</a></p>
+<aside class="special"><p>Existen varias maneras de subir imágenes, vamos a utilizar REST API con parámetros para solicitudes no autenticadas.</p>
+</aside>
+<h3 is-upgraded><strong>Postman</strong></h3>
+<p><code>https://api.cloudinary.com/v1_1/<cloud name>/<resource_type>/upload</code></p>
+<ul>
+<li><code>file</code><br>Tipo archivo, donde seleccionaremos la imagen para enviar</li>
+<li><code>upload_preset</code><br>Nombre del preset<br></li>
+</ul>
+<p class="image-container"><img style="width: 721.00px" src="img\\7fc6eb07b78b03f5.png"></p>
+<ol type="1" start="1">
+<li>Modificar el método a POST.</li>
+<li>Insertar y modificar la url apuntado al nombre de nuestro cloud y al tipo de archivo que deseamos insertar.</li>
+<li>Modificar el body</li>
+<li>Enviamos la petición</li>
+</ol>
+<h3 is-upgraded><strong>Js</strong></h3>
+<pre><code>export const DashboardNoteHelpersUpload = async (file) =&gt; {
+   const cloudUrl = &#39;https://api.cloudinary.com/v1_1/&lt;name cloud&gt;/&lt;type&gt;/upload&#39;;
+   const formData = new FormData();
+   formData.append(&#39;upload_preset&#39;, &#39;name-app&#39;);
+   formData.append(&#39;file&#39;, file);
+   try {
+      const res = await fetch(cloudUrl, {
+         method: &#39;POST&#39;,
+         body: formData
+      })
+      if (res.ok) {
+         const cloudRes = await res.json();
+         return cloudRes.secure_url;
+      } else {
+         throw await res.json();
+      }
+   } catch (error) {
+      throw error;
+   }
+}</code></pre>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

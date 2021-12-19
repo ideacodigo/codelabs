@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-12-19T02:49:51Z",
+  "id": "codelabs",
+  "duration": 7,
+  "title": "Codelabs",
+  "authors": "danddress",
+  "summary": "Codelabs",
+  "source": "1W73Njx4yq209CXxmkpK_bUfOvcc_HMwToSOCazDbEHY",
+  "theme": "web",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "web"
+  ],
+  "tags": [
+    "notas"
+  ],
+  "feedback": "https://diego.iniciarweb.online/",
+  "url": "codelabs"
+}

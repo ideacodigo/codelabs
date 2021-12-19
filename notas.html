@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
+<meta name="description" content="Las notas no son tutoriales, estan tiene contiene apuntes y enlaces a documentación mas completa.">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="generator" content="Codelabs">
-<meta name="application-name" content="Codelabs">
-<link rel="canonical" href="https://example.com/">
+<meta name="generator" content="Notas desarrollo web">
+<meta name="application-name" content="Notas desarrollo web">
+<link rel="canonical" href="https://example.com/notas/">
 <link rel="preconnect" href="https://www.google-analytics.com">
 <script>
 window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
@@ -15,9 +15,9 @@ window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga
       ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<title>Codelabs</title>
+<title>Notas desarrollo web</title>
 <link rel="stylesheet" href="/styles/main.css">
-<link rel="stylesheet" href="/default/style.css">
+<link rel="stylesheet" href="style.css">
 <link rel="import" href="/elements/elements.html">
 <style is="custom-style">
 :root{--paper-tabs-selection-bar-color:currentcolor;--paper-input-container-underline:{display:none}
@@ -27,7 +27,7 @@ window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga
          ;}.dropdown-filter{--paper-input-container:{padding:8px}} </style>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="#455a64">
-<meta name="apple-mobile-web-app-title" content="Codelabs">
+<meta name="apple-mobile-web-app-title" content="Notas desarrollo web">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="194x194" href="/images/favicons/favicon-194x194.png">
@@ -39,9 +39,9 @@ window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga
 <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
 <meta name="theme-color" content="#455a64">
 <meta name="og:type" property="og:type" content="website">
-<meta name="og:title" property="og:title" content="Codelabs">
-<meta name="og:description" property="og:description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
-<meta name="og:url" property="og:url" content="https://example.com/">
+<meta name="og:title" property="og:title" content="Notas desarrollo web">
+<meta name="og:description" property="og:description" content="Las notas no son tutoriales, estan tiene contiene apuntes y enlaces a documentación mas completa.">
+<meta name="og:url" property="og:url" content="https://example.com/notas/">
 <meta name="og:site_name" property="og:site_name" content="Codelabs">
 <meta name="og:determiner" property="og:determiner" content="the">
 <meta name="og:locale" property="og:locale" content="en_US">
@@ -52,13 +52,13 @@ window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga
 <meta name="og:image:height" property="og:image:height" content="1200">
 <meta name="og:image:alt" property="og:image:alt" content="Codelabs">
 <meta name="twitter:card" property="twitter:card" content="summary_large_image">
-<meta name="twitter:title" property="twitter:title" content="Codelabs">
-<meta name="twitter:description" property="twitter:description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
+<meta name="twitter:title" property="twitter:title" content="Notas desarrollo web">
+<meta name="twitter:description" property="twitter:description" content="Las notas no son tutoriales, estan tiene contiene apuntes y enlaces a documentación mas completa.">
 <meta name="twitter:image" property="twitter:image" content="/images/og-image.png">
-<meta name="twitter:url" property="twitter:url" content="https://example.com/">
+<meta name="twitter:url" property="twitter:url" content="https://example.com/notas/">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
-<body id="app" is="body-bind" class="loading fullbleed animate__animated animate__fadeIn">
+<body id="app" is="body-bind" class="loading fullbleed viewanimate__animated animate__fadeIn">
 <paper-header-panel id="main" mode="standard" main>
 <div id="mainToolbar" class="paper-header">
 <div class="site-width layout horizontal">
@@ -74,10 +74,14 @@ window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga
 </div>
 </div>
 </div>
-<header id="banner" down$="[[_toBoolean(selectedFilter)]]">
+<header id="banner" down>
 <div class="site-width">
-<h3 class="banner-title text-center">Guías, notas e instrucción para el desarrollo web y movil</h3>
-<div class="banner-description" data-filter-selected$="[[_toBoolean(selectedFilter)]]">
+<div class="banner-description">
+<img id="logo" src="/notas/coding.png" alt="Event logo">
+<div class="banner-meta">
+<h3>Notas desarrollo web</h3>
+<p>Las notas no son tutoriales, estan tiene contiene apuntes y enlaces a documentación mas completa.</p>
+</div>
 </div>
 </div>
 
@@ -91,12 +95,6 @@ window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga
 <paper-tab>Duration</paper-tab>
 </paper-tabs>
 </div>
-<paper-dropdown-menu label="Choose an event" class="dropdown-filter" no-label-float noink no-animations>
-<paper-listbox id="eventList" slot="dropdown-content" class="dropdown-content"><a href="/notas/" tabindex="-1">
-<paper-item>Notas desarrollo web</paper-item>
-</a>
-</paper-listbox>
-</paper-dropdown-menu>
 <paper-dropdown-menu label="Filter by category" class="dropdown-filter" no-label-float noink no-animations>
 <paper-listbox id="categorylist" slot="dropdown-content" class="dropdown-content" on-iron-activate="onCategoryActivate" attr-for-selected="filter">
 <paper-item filter="firebase">firebase</paper-item>
@@ -104,29 +102,7 @@ window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga
 </paper-listbox>
 </paper-dropdown-menu></div>
 <card-sorter id="cards" class="site-width">
-<a href="/codelabs\firebase-crub\index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-firebase" data-category="firebase,crub" data-title="Firebase crub" data-duration="17" data-updated="2021-12-19T21:30:26Z" data-tags="notas" data-pin="">
-<div class="description">Firebase crub</div>
-<div class="card-duration">
-<span>17 min </span>
-<span>Updated Dec 19, 2021</span>
-</div>
-<div class="card-footer">
-<div class="category-icon firebase-icon"></div>
-<paper-button class="firebase-bg">Start</paper-button>
-</div>
-</a>
-<a href="/codelabs\basic-git-console\index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-web" data-category="web" data-title="Git consola básico" data-duration="6" data-updated="2021-10-24T10:47:49-05:00" data-tags="notas" data-pin="">
-<div class="description">Git consola básico</div>
-<div class="card-duration">
-<span>6 min </span>
-<span>Updated Oct 24, 2021</span>
-</div>
-<div class="card-footer">
-<div class="category-icon web-icon"></div>
-<paper-button class="web-bg">Start</paper-button>
-</div>
-</a>
-<a href="/codelabs\codelabs\index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-web" data-category="web" data-title="Codelabs" data-duration="7" data-updated="2021-12-19T02:49:51Z" data-tags="notas" data-pin="">
+<a href="/codelabs\codelabs\index.html?index=..%2F..notas" on-tap="navigate" class="codelab-card category-web" data-category="web" data-title="Codelabs" data-duration="7" data-updated="2021-12-19T02:49:51Z" data-tags="notas" data-pin="">
 <div class="description">Codelabs</div>
 <div class="card-duration">
 <span>7 min </span>
@@ -137,7 +113,29 @@ window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga
 <paper-button class="web-bg">Start</paper-button>
 </div>
 </a>
-<a href="/codelabs\recursos\index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-web" data-category="web" data-title="Recursos" data-duration="3" data-updated="2021-12-19T21:49:21Z" data-tags="notas" data-pin="">
+<a href="/codelabs\firebase-crub\index.html?index=..%2F..notas" on-tap="navigate" class="codelab-card category-firebase" data-category="firebase,crub" data-title="Firebase crub" data-duration="17" data-updated="2021-12-19T21:30:26Z" data-tags="notas" data-pin="">
+<div class="description">Firebase crub</div>
+<div class="card-duration">
+<span>17 min </span>
+<span>Updated Dec 19, 2021</span>
+</div>
+<div class="card-footer">
+<div class="category-icon firebase-icon"></div>
+<paper-button class="firebase-bg">Start</paper-button>
+</div>
+</a>
+<a href="/codelabs\basic-git-console\index.html?index=..%2F..notas" on-tap="navigate" class="codelab-card category-web" data-category="web" data-title="Git consola básico" data-duration="6" data-updated="2021-10-24T10:47:49-05:00" data-tags="notas" data-pin="">
+<div class="description">Git consola básico</div>
+<div class="card-duration">
+<span>6 min </span>
+<span>Updated Oct 24, 2021</span>
+</div>
+<div class="card-footer">
+<div class="category-icon web-icon"></div>
+<paper-button class="web-bg">Start</paper-button>
+</div>
+</a>
+<a href="/codelabs\recursos\index.html?index=..%2F..notas" on-tap="navigate" class="codelab-card category-web" data-category="web" data-title="Recursos" data-duration="3" data-updated="2021-12-19T21:49:21Z" data-tags="notas" data-pin="">
 <div class="description">Recursos</div>
 <div class="card-duration">
 <span>3 min </span>

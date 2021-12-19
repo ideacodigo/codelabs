@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-12-19T21:49:21Z",
+  "id": "recursos",
+  "duration": 3,
+  "title": "Recursos",
+  "authors": "danddress",
+  "summary": "Recursos no ordenados",
+  "source": "1ZN5Uf-kdZwfUqQnryY_VNs2-uEO_3acKJI43NOoiEd0",
+  "theme": "cloud",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "web"
+  ],
+  "tags": [
+    "notas"
+  ],
+  "feedback": "diego.iniciarweb.online",
+  "url": "recursos"
+}

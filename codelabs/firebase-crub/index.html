@@ -1,0 +1,153 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Firebase crub</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="firebase-crub"
+                  title="Firebase crub"
+                  environment="web"
+                  feedback-link="https://diego.iniciarweb.online">
+    
+      <google-codelab-step label="Entorno de desarrollo" duration="3">
+        <p><a href="https://firebase.google.com/docs/firestore/quickstart?hl=es#set_up_your_development_environment" target="_blank">Primeros pasos con Cloud Firestore  |  Firebase Documentation (google.com)</a></p>
+<h2 is-upgraded>Instalar firebase con npm</h2>
+<pre><code>npm install firebase</code></pre>
+<h2 is-upgraded>Dependencias</h2>
+<pre><code>import { initializeApp } from &#34;firebase/app&#34;
+import { getFirestore } from &#34;firebase/firestore&#34;</code></pre>
+<h2 is-upgraded><strong>Inicializa firebase en tu app</strong></h2>
+<pre><code>const firebaseConfig = {
+   apiKey: &#34;&#34;,
+   authDomain: &#34;&#34;,
+   projectId: &#34;&#34;,
+   storageBucket: &#34;&#34;,
+   messagingSenderId: &#34;&#34;,
+   appId: &#34;&#34;
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);</code></pre>
+<p>Los parametros de </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Crear base de datos" duration="3">
+        <aside class="warning"><p>Vamos a tener en cuenta que ya se creó el proyecto en firebase: <a href="https://console.firebase.google.com/u/0/?hl=es" target="_blank">Firebase console (google.com)</a></p>
+<p>Por lo que para iniciar el procedimiento del codelab deberás estar dentro de tu proyecto en firebase</p>
+</aside>
+<h2 is-upgraded>Crear <strong>Cloud Firestore</strong></h2>
+<p class="image-container"><img style="width: 624.00px" src="img\\7e7a48f66d674180.png"></p>
+<h3 is-upgraded><strong>Configurción</strong></h3>
+<ol type="1" start="1">
+<li>Crea reglas de seguridad de Cloud Firestore: <br>Iniciar en <strong>modo producción</strong></li>
+<li>Configura la ubicación de Cloud Firestore:<br>Recomendable dejar la <strong>opción recomendada.</strong></li>
+</ol>
+<h3 is-upgraded><strong>Reglas</strong></h3>
+<aside class="warning"><p>La regla que vamos a modificar, es con fines de desarrollo. Las reglas deben ser modificadas conforme lo indique la documentación.</p>
+</aside>
+<p class="image-container"><img style="width: 624.00px" src="img\\a1bb856782659ab0.png"></p>
+<aside class="special"><p>¡Genial! Ya tenemos listo nuestra base de datos, más adelante configuraremos algunas reglas.</p>
+<p>Si deseas conocer más sobre el tipo de datos, puedes echar un vistazo a la documentación: <a href="https://firebase.google.com/docs/firestore/data-model?hl=es" target="_blank">Modelo de datos de Cloud Firestore  |  Firebase Documentation (google.com)</a></p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Agregar registros" duration="3">
+        <p>Cloud firestore funciona en base a colecciones y documentos, como  lo mencionamos al final de la anterior sección, esto lo puedes entender de manera más clara en la documentación: <a href="https://firebase.google.com/docs/firestore/data-model?hl=es" target="_blank">Modelo de datos de Cloud Firestore  |  Firebase Documentation (google.com)</a>.</p>
+<p>Pero si quieres una idea rápida, imagina una carpeta y documentos dentro de esta. La carpeta es una colección que su función es contener documentos, los documentos son los encargados de contener datos, como un los de un usuario: nombre, edad, género.</p>
+<p class="image-container"><img style="width: 348.26px" src="img\\e57175bb4bb87495.png"><img style="width: 242.50px" src="img\\9e864c1d97feed86.png"></p>
+<aside class="special"><p>Si revisaste la documentación pudiste darte cuenta de un ejemplo de cómo referenciar colecciones, documentos y si revisaste un poco más, probablemente encontraste la documentación de las diferentes maneras de agregar registros: <a href="https://firebase.google.com/docs/firestore/manage-data/add-data?hl=es" target="_blank">Agrega datos a Cloud Firestore  |  Firebase Documentation (google.com)</a></p>
+</aside>
+<pre><code>import { collection, addDoc } from &#34;firebase/firestore&#34;;
+
+// Add a new document with a generated id.
+const docRef = await addDoc(collection(db, &#34;cities&#34;), {
+   name: &#34;Tokyo&#34;,
+   country: &#34;Japan&#34;
+});
+console.log(&#34;Document written with ID: &#34;, docRef.id);</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Reglas" duration="3">
+        <aside class="warning"><p>Si tenemos implementada una <strong>autenticación con firebase</strong>, podemos implementar la siguiente regla para mejorar la seguridad de nuestro cloud firestore: <code>request.auth != null</code>.</p>
+</aside>
+<p class="image-container"><img style="width: 740.41px" src="img\\c60d51ba549e9a75.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Leer registros" duration="3">
+        <aside class="warning"><p>Nuevamente vamos a mencionar la documentación: <a href="https://firebase.google.com/docs/firestore/query-data/get-data?hl=es" target="_blank">Obtén datos con Cloud Firestore  |  Firebase Documentation (google.com)</a>, ya que existen diferentes formas de obtener los datos, tanto como implementar reglas de consulta, consultar documentos o todos los documentos de una colección.</p>
+</aside>
+<h2 is-upgraded><strong>Obtén todos los documentos de una colección</strong></h2>
+<p><a href="https://firebase.google.com/docs/firestore/query-data/get-data?hl=es#get_all_documents_in_a_collection" target="_blank">Obtén datos con Cloud Firestore  |  Firebase Documentation (google.com)</a></p>
+<h3 is-upgraded><a href="https://github.com/firebase/snippets-web/blob/1c4c6834f310bf53a98b3fa3c2e2191396cacd69/snippets/firestore-next/test-firestore/get_multiple_all.js#L8-L14" target="_blank">get_multiple_all.js</a></h3>
+<pre><code>import { collection, getDocs } from &#34;firebase/firestore&#34;;
+const querySnapshot = await getDocs(collection(db, &#34;cities&#34;));
+querySnapshot.forEach((doc) =&gt; {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, &#34; =&gt; &#34;, doc.data());
+});</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Modificar registros" duration="1">
+        <p>Para modificar un documento sobreescribimos los datos</p>
+<h2 is-upgraded><strong>Agrega un documento</strong></h2>
+<p><a href="https://firebase.google.com/docs/firestore/manage-data/add-data?hl=es#add_a_document" target="_blank">Agrega datos a Cloud Firestore  |  Firebase Documentation (google.com)</a></p>
+<h3 is-upgraded><a href="https://github.com/firebase/snippets-web/blob/1c4c6834f310bf53a98b3fa3c2e2191396cacd69/snippets/firestore-next/test-firestore/cities_document_set.js#L8-L10" target="_blank">cities_document_set.js</a></h3>
+<pre><code>import { doc, setDoc } from &#34;firebase/firestore&#34;;
+
+await setDoc(doc(db, &#34;cities&#34;, &#34;new-city-id&#34;), data);
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Eliminar registros" duration="1">
+        <p>Para eliminar un método utilizamos el método <code>delete()</code></p>
+<aside class="warning"><p>Como se menciona en la documentación, esto solo borra documentos, no es recomendable borrar colecciones de desde un cliente web. </p>
+</aside>
+<p><a href="https://firebase.google.com/docs/firestore/manage-data/delete-data?hl=es#delete_documents" target="_blank">Borra datos de Cloud Firestore  |  Firebase Documentation (google.com)</a></p>
+<h3 is-upgraded><a href="https://github.com/firebase/snippets-web/blob/1c4c6834f310bf53a98b3fa3c2e2191396cacd69/snippets/firestore-next/test-firestore/delete_document.js#L8-L10" target="_blank">delete_document_set.js</a></h3>
+<pre><code>import { doc, deleteDoc } from &#34;firebase/firestore&#34;;
+
+await deleteDoc(doc(db, &#34;cities&#34;, &#34;DC&#34;));</code></pre>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
