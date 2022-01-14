@@ -1,200 +1,289 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
 
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="generator" content="Codelabs">
-<meta name="application-name" content="Codelabs">
-<link rel="canonical" href="https://example.com/">
-<link rel="preconnect" href="https://www.google-analytics.com">
-<script>
-window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+   <meta charset="utf-8">
+   <meta name="description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="generator" content="Codelabs">
+   <meta name="application-name" content="Codelabs">
+   <link rel="canonical" href="https://example.com/" />
+   <link rel="preconnect" href="https://www.google-analytics.com" />
+
+   <script>
+      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
       ga('create', 'UA-49880327-14', 'auto');
       ga('send', 'pageview');
-</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-<title>Codelabs</title>
-<link rel="stylesheet" href="/styles/main.css">
-<link rel="stylesheet" href="/default/style.css">
-<link rel="import" href="/elements/elements.html">
-<style is="custom-style">
-:root{--paper-tabs-selection-bar-color:currentcolor;--paper-input-container-underline:{display:none}
+      
+   </script>
+   <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-         ;--paper-input-container-underline-focus:{display:none}
+   <title>Codelabs</title>
 
-         ;}.dropdown-filter{--paper-input-container:{padding:8px}} </style>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#455a64">
-<meta name="apple-mobile-web-app-title" content="Codelabs">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="194x194" href="/images/favicons/favicon-194x194.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#455a64">
-<meta name="msapplication-TileColor" content="#455a64">
-<meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
-<meta name="theme-color" content="#455a64">
-<meta name="og:type" property="og:type" content="website">
-<meta name="og:title" property="og:title" content="Codelabs">
-<meta name="og:description" property="og:description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
-<meta name="og:url" property="og:url" content="https://example.com/">
-<meta name="og:site_name" property="og:site_name" content="Codelabs">
-<meta name="og:determiner" property="og:determiner" content="the">
-<meta name="og:locale" property="og:locale" content="en_US">
-<meta name="og:image" property="og:image" content="/images/og-image.png">
-<meta name="og:image:url" property="og:image:url" content="/images/og-image.png">
-<meta name="og:image:type" property="og:image:type" content="image/png">
-<meta name="og:image:width" property="og:image:width" content="1200">
-<meta name="og:image:height" property="og:image:height" content="1200">
-<meta name="og:image:alt" property="og:image:alt" content="Codelabs">
-<meta name="twitter:card" property="twitter:card" content="summary_large_image">
-<meta name="twitter:title" property="twitter:title" content="Codelabs">
-<meta name="twitter:description" property="twitter:description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
-<meta name="twitter:image" property="twitter:image" content="/images/og-image.png">
-<meta name="twitter:url" property="twitter:url" content="https://example.com/">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   <link rel="stylesheet" href="/styles/main.css">
+
+   
+   <link rel="stylesheet" href="/default/style.css">
+
+   <link rel="import" href="/elements/elements.html">
+
+   <style is="custom-style">
+      :root {
+         --paper-tabs-selection-bar-color: currentcolor;
+
+         --paper-input-container-underline: {
+            display: none;
+         }
+
+         ;
+
+         --paper-input-container-underline-focus: {
+            display: none;
+         }
+
+         ;
+      }
+
+      .dropdown-filter {
+         --paper-input-container: {
+            padding: 8px;
+         }
+      }
+   </style>
+
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="#455a64">
+   <meta name="apple-mobile-web-app-title" content="Codelabs">
+   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="194x194" href="/images/favicons/favicon-194x194.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/android-chrome-192x192.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+   <link rel="manifest" href="site.webmanifest">
+   <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#455a64">
+   <meta name="msapplication-TileColor" content="#455a64">
+   <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
+   <meta name="theme-color" content="#455a64">
+
+   <meta name="og:type" property="og:type" content="website" />
+   <meta name="og:title" property="og:title" content="Codelabs" />
+   <meta name="og:description" property="og:description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application." />
+   <meta name="og:url" property="og:url" content="https://example.com/" />
+   <meta name="og:site_name" property="og:site_name" content="Codelabs" />
+   <meta name="og:determiner" property="og:determiner" content="the" />
+   <meta name="og:locale" property="og:locale" content="en_US" />
+   <meta name="og:image" property="og:image" content="/images/og-image.png" />
+   <meta name="og:image:url" property="og:image:url" content="/images/og-image.png" />
+   <meta name="og:image:type" property="og:image:type" content="image/png" />
+   <meta name="og:image:width" property="og:image:width" content="1200" />
+   <meta name="og:image:height" property="og:image:height" content="1200" />
+   <meta name="og:image:alt" property="og:image:alt" content="Codelabs" />
+
+   <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+   <meta name="twitter:title" property="twitter:title" content="Codelabs" />
+   <meta name="twitter:description" property="twitter:description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application." />
+   <meta name="twitter:image" property="twitter:image" content="/images/og-image.png" />
+   <meta name="twitter:url" property="twitter:url" content="https://example.com/" />
+
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
-<body id="app" is="body-bind" class="loading fullbleed animate__animated animate__fadeIn">
-<paper-header-panel id="main" mode="standard" main>
-<div id="mainToolbar" class="paper-header">
-<div class="site-width layout horizontal">
-<a href="/">
-<img src="/images/logo.png" class="logo-devs" alt="Codelabs Logo">
-</a>
-<div id="searchbar">
-<paper-input-container no-label-float>
-<paper-icon-button prefix icon="search"></paper-icon-button>
-<label>Search</label>
-<input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown">
-</paper-input-container>
-</div>
-</div>
-</div>
-<header id="banner" down$="[[_toBoolean(selectedFilter)]]">
-<div class="site-width">
-<h3 class="banner-title text-center">Guías, notas e instrucción para el desarrollo web y movil</h3>
-<div class="banner-description" data-filter-selected$="[[_toBoolean(selectedFilter)]]">
-</div>
-</div>
 
-</header>
-<main>
-<div id="filters" class="site-width layout horizontal center justified">
-<div id="sortby">
-<paper-tabs selected="0" noink on-iron-activate="sortBy">
-<paper-tab>A-Z</paper-tab>
-<paper-tab>Recent</paper-tab>
-<paper-tab>Duration</paper-tab>
-</paper-tabs>
-</div>
-<paper-dropdown-menu label="Choose an event" class="dropdown-filter" no-label-float noink no-animations>
-<paper-listbox id="eventList" slot="dropdown-content" class="dropdown-content"><a href="/notas/" tabindex="-1">
-<paper-item>Notas desarrollo web</paper-item>
-</a>
-</paper-listbox>
-</paper-dropdown-menu>
-<paper-dropdown-menu label="Filter by category" class="dropdown-filter" no-label-float noink no-animations>
-<paper-listbox id="categorylist" slot="dropdown-content" class="dropdown-content" on-iron-activate="onCategoryActivate" attr-for-selected="filter">
-<paper-item filter="firebase">firebase</paper-item>
-<paper-item filter="web">web</paper-item>
-</paper-listbox>
-</paper-dropdown-menu></div>
-<card-sorter id="cards" class="site-width">
-<a href="/codelabs\firebase-crub\index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-firebase" data-category="firebase,crub" data-title="Firebase crub" data-duration="17" data-updated="2021-12-19T21:30:26Z" data-tags="notas" data-pin="">
-<div class="description">Firebase crub</div>
-<div class="card-duration">
-<span>17 min </span>
-<span>Updated Dec 19, 2021</span>
-</div>
-<div class="card-footer">
-<div class="category-icon firebase-icon"></div>
-<paper-button class="firebase-bg">Start</paper-button>
-</div>
-</a>
-<a href="/codelabs\basic-git-console\index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-web" data-category="web" data-title="Git consola básico" data-duration="6" data-updated="2021-10-24T10:47:49-05:00" data-tags="notas" data-pin="">
-<div class="description">Git consola básico</div>
-<div class="card-duration">
-<span>6 min </span>
-<span>Updated Oct 24, 2021</span>
-</div>
-<div class="card-footer">
-<div class="category-icon web-icon"></div>
-<paper-button class="web-bg">Start</paper-button>
-</div>
-</a>
-<a href="/codelabs\codelabs\index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-web" data-category="web" data-title="Codelabs" data-duration="7" data-updated="2021-12-19T02:49:51Z" data-tags="notas" data-pin="">
-<div class="description">Codelabs</div>
-<div class="card-duration">
-<span>7 min </span>
-<span>Updated Dec 19, 2021</span>
-</div>
-<div class="card-footer">
-<div class="category-icon web-icon"></div>
-<paper-button class="web-bg">Start</paper-button>
-</div>
-</a>
-<a href="/codelabs\recursos\index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-web" data-category="web" data-title="Recursos" data-duration="3" data-updated="2021-12-19T21:49:21Z" data-tags="notas" data-pin="">
-<div class="description">Recursos</div>
-<div class="card-duration">
-<span>3 min </span>
-<span>Updated Dec 19, 2021</span>
-</div>
-<div class="card-footer">
-<div class="category-icon web-icon"></div>
-<paper-button class="web-bg">Start</paper-button>
-</div>
-</a>
-</card-sorter>
-<div id="loading-placeholder" class="site-width">
-Loading Codelabs, please wait...
-</div>
-</main>
-<footer id="footer">
-<div class="footer-wrapper site-width">
-<div class="link-list">
-<label>Connect</label>
-<ul>
-<li><a href="https://twitter.com/dco0der">Twitter</a></li>
-<li><a href="https://www.facebook.com/diego0at">Facebook</a></li>
-<li><a href="https://www.instagram.com/danddress/">Instagram</a></li>
-<li><a href="https://github.com/diego0at">GitHub</a></li>
-</ul>
-</div>
-<div class="link-list">
-<label>Programs</label>
-<ul>
-<li><a href="https://github.com/diego0at">GitHub</a></li>
-<li><div>Iconos diseñados por <a href="https://www.flaticon.es/autores/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div></li>
-</ul>
-</div>
-<div class="link-list">
-<label>Developer Consoles</label>
-<ul>
-<li><a href="https://github.com/diego0at">GitHub</a></li>
-</ul>
-</div>
-<div class="link-list">
-<label>Explore</label>
-<ul>
-<li><a href="https://github.com/diego0at">GitHub</a></li>
-</ul>
-</div>
-</div>
-</footer>
-<div class="footerbar">
-<div class="site-width layout horizontal center justified">
-<span>
-<a href="https://example.com">Terms</a>
-&nbsp; | &nbsp;
-<a href="https://example.com">Privacy</a>
-</span>
-</div>
-</div>
-</paper-header-panel>
-<script src="/scripts/main.js"></script>
+<body id="app" is="body-bind"
+   class="loading fullbleed animate__animated animate__fadeIn">
+   <paper-header-panel id="main" mode="standard" main>
+      
+      <div id="mainToolbar" class="paper-header">
+         <div class="site-width layout horizontal">
+            <a href="/">
+               <img src="/images/logo.png" class="logo-devs" alt="Codelabs Logo">
+            </a>
+            <div id="searchbar">
+               <paper-input-container no-label-float>
+                  <paper-icon-button prefix icon="search"></paper-icon-button>
+                  <label>Search</label>
+                  <input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown">
+               </paper-input-container>
+            </div>
+         </div>
+      </div>
+      
+
+      
+      <header id="banner" down$="[[_toBoolean(selectedFilter)]]">
+         <div class="site-width">
+            
+            <h3 class="banner-title text-center">Guías, notas e instrucción para el desarrollo web y movil</h3>
+            <div class="banner-description" data-filter-selected$="[[_toBoolean(selectedFilter)]]">
+               <!-- <p class="banner-info">
+                  Proximamente
+               </p> -->
+               </div>
+            </div>
+         </div>
+      </header>
+
+      <main>
+         <div id="filters" class="site-width layout horizontal center justified">
+            <div id="sortby">
+               <paper-tabs selected="0" noink on-iron-activate="sortBy">
+                  <paper-tab>A-Z</paper-tab>
+                  <paper-tab>Recent</paper-tab>
+                  <paper-tab>Duration</paper-tab>
+               </paper-tabs>
+            </div>
+
+            
+            <paper-dropdown-menu label="Choose an event" class="dropdown-filter" no-label-float noink no-animations>
+               <paper-listbox id="eventList" slot="dropdown-content" class="dropdown-content"><a href="/notas/" tabindex="-1">
+                     <paper-item>Notas desarrollo web</paper-item>
+                  </a>
+                  
+               </paper-listbox>
+            </paper-dropdown-menu>
+            <paper-dropdown-menu label="Filter by category" class="dropdown-filter" no-label-float noink no-animations>
+               <paper-listbox id="categorylist" slot="dropdown-content" class="dropdown-content"
+                  on-iron-activate="onCategoryActivate" attr-for-selected="filter">
+                  <paper-item filter="firebase">firebase</paper-item>
+                  <paper-item filter="web">web</paper-item>
+                  
+               </paper-listbox>
+            </paper-dropdown-menu></div>
+
+         <card-sorter id="cards" class="site-width">
+            
+            
+            
+            <a href="/codelabs\firebase-crud\index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-firebase" data-category="firebase"
+               data-title="Firebase crud" data-duration="19" data-updated="2022-01-14T19:12:22Z"
+               data-tags="notas" data-pin="">
+               <div class="description">Firebase crud</div>
+               <div class="card-duration">
+                  <span>19 min </span>
+                  <span>Updated Jan 14, 2022</span>
+               </div>
+               <div class="card-footer">
+                  <div class="category-icon firebase-icon"></div>
+                  <paper-button class="firebase-bg">Start</paper-button>
+               </div>
+            </a>
+            
+            
+            
+            <a href="/codelabs\basic-git-console\index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-web" data-category="web"
+               data-title="Git consola básico" data-duration="6" data-updated="2021-10-24T10:47:49-05:00"
+               data-tags="notas" data-pin="">
+               <div class="description">Git consola básico</div>
+               <div class="card-duration">
+                  <span>6 min </span>
+                  <span>Updated Oct 24, 2021</span>
+               </div>
+               <div class="card-footer">
+                  <div class="category-icon web-icon"></div>
+                  <paper-button class="web-bg">Start</paper-button>
+               </div>
+            </a>
+            
+            
+            
+            <a href="/codelabs\codelabs\index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-web" data-category="web"
+               data-title="Codelabs" data-duration="7" data-updated="2021-12-19T02:49:51Z"
+               data-tags="notas" data-pin="">
+               <div class="description">Codelabs</div>
+               <div class="card-duration">
+                  <span>7 min </span>
+                  <span>Updated Dec 19, 2021</span>
+               </div>
+               <div class="card-footer">
+                  <div class="category-icon web-icon"></div>
+                  <paper-button class="web-bg">Start</paper-button>
+               </div>
+            </a>
+            
+            
+            
+            <a href="/codelabs\recursos\index.html?index=..%2F..index" on-tap="navigate"
+               class="codelab-card category-web" data-category="web"
+               data-title="Recursos" data-duration="3" data-updated="2021-12-19T21:49:21Z"
+               data-tags="notas" data-pin="">
+               <div class="description">Recursos</div>
+               <div class="card-duration">
+                  <span>3 min </span>
+                  <span>Updated Dec 19, 2021</span>
+               </div>
+               <div class="card-footer">
+                  <div class="category-icon web-icon"></div>
+                  <paper-button class="web-bg">Start</paper-button>
+               </div>
+            </a>
+            
+         </card-sorter>
+
+         <div id="loading-placeholder" class="site-width">
+            Loading Codelabs, please wait...
+         </div>
+      </main>
+
+      <footer id="footer">
+         <div class="footer-wrapper site-width">
+            <div class="link-list">
+               <label>Connect</label>
+               <ul>
+                  <li><a href="https://twitter.com/dco0der">Twitter</a></li>
+                  <li><a href="https://www.facebook.com/diego0at">Facebook</a></li>
+                  <li><a href="https://www.instagram.com/danddress/">Instagram</a></li>
+                  <li><a href="https://github.com/diego0at">GitHub</a></li>
+               </ul>
+            </div>
+            <div class="link-list">
+               <label>Programs</label>
+               <ul>
+                  <li><a href="https://github.com/diego0at">GitHub</a></li>
+                  <li><div>Iconos diseñados por <a href="https://www.flaticon.es/autores/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div></li>
+               </ul>
+            </div>
+            <div class="link-list">
+               <label>Developer Consoles</label>
+               <ul>
+                  <li><a href="https://github.com/diego0at">GitHub</a></li>
+               </ul>
+            </div>
+            <div class="link-list">
+               <label>Explore</label>
+               <ul>
+                  <li><a href="https://github.com/diego0at">GitHub</a></li>
+               </ul>
+            </div>
+         </div>
+      </footer>
+
+      <div class="footerbar">
+         <div class="site-width layout horizontal center justified">
+            <span>
+               <a href="https://example.com">Terms</a>
+               &nbsp; | &nbsp;
+               <a href="https://example.com">Privacy</a>
+            </span>
+         </div>
+      </div>
+
+   </paper-header-panel>
+
+   <script src="/scripts/main.js"></script>
 </body>
+
 </html>
