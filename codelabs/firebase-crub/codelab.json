@@ -3,24 +3,23 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2021-12-19T21:30:26Z",
-  "id": "firebase-crub",
-  "duration": 17,
-  "title": "Firebase crub",
+  "updated": "2022-01-14T19:12:22Z",
+  "id": "firebase-crud",
+  "duration": 19,
+  "title": "Firebase crud",
   "authors": "danddress",
-  "summary": "Notas y enlaces rápidos para realizar un crub en firebase",
+  "summary": "Notas y enlaces rápidos para realizar un crud en firebase",
   "source": "1bA0sCd4Y86iEBpg1RS9XmgZfrfhCJQoAbBx7v8FHLyk",
   "theme": "firebase",
   "status": [
     "published"
   ],
   "category": [
-    "firebase",
-    "crub"
+    "firebase"
   ],
   "tags": [
     "notas"
   ],
   "feedback": "https://diego.iniciarweb.online",
-  "url": "firebase-crub"
+  "url": "firebase-crud"
 }
