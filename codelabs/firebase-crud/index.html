@@ -110,6 +110,7 @@ export {
 <p>Pero si quieres una idea rápida, imagina una carpeta y documentos dentro de esta. La carpeta es una colección que su función es contener documentos, los documentos son los encargados de contener datos, como un los de un usuario: nombre, edad, género.</p>
 <p class="image-container"><img style="width: 348.26px" src="img\\e57175bb4bb87495.png"><img style="width: 242.50px" src="img\\9e864c1d97feed86.png"></p>
 <aside class="special"><p>Si revisaste la documentación pudiste darte cuenta de un ejemplo de cómo referenciar colecciones, documentos y si revisaste un poco más, probablemente encontraste la documentación de las diferentes maneras de agregar registros: <a href="https://firebase.google.com/docs/firestore/manage-data/add-data?hl=es" target="_blank">Agrega datos a Cloud Firestore  |  Firebase Documentation (google.com)</a></p>
+<p><code>addDoc</code> agrega un documento dentro de la colección &#34;cities&#34; y genera un ID para este,  por que la ruta para cualquier documento debe ser impar o uno, ejemplo: <code>addDoc(collection(db, "users", "publics", "usersregister"</code></p>
 </aside>
 <pre><code>import { collection, addDoc } from &#34;firebase/firestore&#34;;
 
@@ -119,6 +120,8 @@ const docRef = await addDoc(collection(db, &#34;cities&#34;), {
    country: &#34;Japan&#34;
 });
 console.log(&#34;Document written with ID: &#34;, docRef.id);</code></pre>
+<aside class="warning"><p><code>addDoc(collection(db, "users", "publics")</code> genera un error, ya que intenta grabar un documento dentro de un documento, y esto es imposible ya que los documentos se almacenan en colecciones.</p>
+</aside>
 
 
       </google-codelab-step>
