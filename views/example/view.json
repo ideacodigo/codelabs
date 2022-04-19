@@ -1,0 +1,17 @@
+{
+  "title": "My Event",
+  "description": "",
+  "tags": ["git-flow"],
+  "categories": [],
+  "customStyle": "style.css",
+  "exclude": [
+    ".*-about$",
+    "^lang-.*"
+  ],
+  "logoUrl": "vslive-logo.jpg",
+  "catLevel": 0,
+  "sort": "mainCategory",
+  "pins": [],
+  "ga": "",
+  "hidden": false
+}

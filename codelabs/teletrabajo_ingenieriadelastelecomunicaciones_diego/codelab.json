@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-04-19T02:22:35Z",
+  "id": "teletrabajo_ingenieriadelastelecomunicaciones_diego",
+  "duration": 14,
+  "title": "Teletrabajo",
+  "authors": "danddress",
+  "summary": "Elementos se requieren para implementar teletrabajo y leyes regulan este tipo de trabajo en Colombia.",
+  "source": "1MefRYY9a4AdO8P914rEGGvz9hMi3SBTJv8CSWuHkwrM",
+  "theme": "web",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "web"
+  ],
+  "tags": [
+    "notas"
+  ],
+  "feedback": "https://diego.iniciarweb.online/",
+  "url": "teletrabajo_ingenieriadelastelecomunicaciones_diego"
+}

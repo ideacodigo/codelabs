@@ -1,0 +1,10 @@
+{
+  "title": "Notas desarrollo web",
+  "description": "Las notas no son tutoriales, estas tiene contiene apuntes y enlaces a documentación mas completa.",
+  "logoUrl": "/notas/coding.png",
+  "tags": ["notas"],
+  "exclude": [
+    ".*-about$",
+    "^lang-.*"
+  ]
+}
